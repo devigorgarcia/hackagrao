@@ -1,12 +1,16 @@
 import { Button, Flex, Grid, Heading, Input, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Switch } from "@chakra-ui/react";
 
 export const InitialPage = () => {
   const history = useHistory();
   const [grao, setGrao] = useState(false);
-  console.log(grao);
+
+  const handlePlay = (route) => {
+    history.push(`/${route}`);
+
+  };
   return (
     <Flex>
       <Grid>
@@ -16,9 +20,9 @@ export const InitialPage = () => {
         <Text>Quer ajuda da Grão Direto?</Text>
         <Switch id="graoHelp" onChange={() => setGrao(!grao)} />
         {grao ? (
-          <Button onClick={() => history.push("/gameg")}>Iniciar Jogo</Button>
+          <Button onClick={() => handlePlay("gameg")}>Iniciar Jogo</Button>
         ) : (
-          <Button onClick={() => history.push("/game")}>Iniciar </Button>
+          <Button onClick={() => handlePlay("game")}>Iniciar </Button>
         )}
       </Grid>
     </Flex>

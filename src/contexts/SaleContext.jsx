@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const SaleContext = createContext({});
+export const SaleContext = createContext({});
 
 export const SaleProvider = ({ children }) => {
   const [name, setName] = useState("");
