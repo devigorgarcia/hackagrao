@@ -6,7 +6,7 @@ import { Switch } from "@chakra-ui/react";
 export const InitialPage = () => {
   const history = useHistory();
   const [grao, setGrao] = useState(false);
-  console.log(grao);
+
   return (
     <Flex>
       <Grid>
