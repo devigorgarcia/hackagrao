@@ -1,5 +1,6 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
+import CenarioRandom from '../pages/cenarioRandom'
 import { GamePage } from '../pages/Game'
 import { InitialPage } from '../pages/InitialPage'
 
