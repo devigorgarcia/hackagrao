@@ -1,15 +1,8 @@
-import { Flex, Grid, Text } from "@chakra-ui/react";
-import React, { useContext } from "react";
-import { ScenarioContext } from "../../contexts/ScenarioContext";
+import { GamePage } from "../../components/GamePage";
 
-export const GamePage = () => {
-  const { scenario } = useContext(ScenarioContext);
-  console.log(scenario)
+export const GamePage1 = () => {
+ 
   return (
-    <Flex>
-      <Grid>
-        <Text></Text>
-      </Grid>
-    </Flex>
+    <GamePage page={4}/>
   );
 };

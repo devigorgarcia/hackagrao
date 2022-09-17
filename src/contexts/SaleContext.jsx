@@ -7,11 +7,11 @@ export const SaleProvider = ({ children }) => {
   const [currentValue, setCurrentValue] = useState(0);
   const [storage, setStorage] = useState(300000);
 
-  const valuesAmount = (sacks, sackValue) => {
-    let newValue = sackValue * sacks;
+  const valuesAmount = (bags, bagsValue) => {
+    let newValue = bagsValue * bags;
     setCurrentValue(newValue);
 
-    let newStorage = storage - sacks;
+    let newStorage = storage - bags;
     setStorage(newStorage);
   };
 
@@ -21,7 +21,7 @@ export const SaleProvider = ({ children }) => {
   };
 
   return (
-    <SaleContext.Provider value={{ name, setName, valuesAmount, person }}>
+    <SaleContext.Provider value={{ name, setName, valuesAmount, person, storage, setStorage }}>
       {children}
     </SaleContext.Provider>
   );

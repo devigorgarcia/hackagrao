@@ -5,14 +5,12 @@ export const ScenarioContext = createContext();
 
 function ScenarioProvider({ children }) {
   const [number, setNumber] = useState(0);
+  
   const [scenario, setScenario] = useState({});
   const [selectedNumber, setSelectedNumber] = useState([]);
 
-  function randomNumber() {
-    setNumber(parseInt(Math.random() * 5 + 1));
-  }
   function randomScenario() {
-    setNumber(randomNumber());
+    setNumber(parseInt(Math.random() * 5 + 1));
     if (!selectedNumber.includes(number)) {
       setScenario(scenarios[number]);
       setSelectedNumber([...selectedNumber, number]);

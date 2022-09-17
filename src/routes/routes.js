@@ -1,17 +1,16 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
-import { GamePage } from '../pages/GamePage1'
-
-import { InitialPage } from '../pages/InitialPage'
+import { GamePage1 } from '../pages/GamePage1'
+import { PlayerPage } from '../pages/playerPage'
 
 export const Routes = () => {
   return (
     <Switch>
-      <Route exact path={'/'}>
-        <InitialPage/>
+      <Route exact path={'/playerPage'}>
+        <PlayerPage/>
       </Route>
-      <Route path={'/game'}>
-        <GamePage/>
+      <Route path={'/game1'}>
+        <GamePage1/>
       </Route>
     </Switch>
   )
