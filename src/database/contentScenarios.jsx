@@ -1,35 +1,35 @@
 const scenarios = [
     {
-        content: "Foi inciado um conflito geopolítico entre dois países da Europa, onde um deles é grande produtor e exportador de petróleo, milho, trigo entre outros. Após longo período com o valor da saca girando em torno de R$170,00, neste primeiro dia de conflito, o valor ALCANÇOU",
+        content: "Foi inciado um conflito geopolítico entre dois países da Europa. O valor é de",
         value: 177,
-        reason: ' Essa situação causou bastante instabilidade nos preços e, consequentemente, aumentou os preços dos grãos, principalmente pelo temor da falta de produtos num futuro próximo.'
+        reason: ' Um destes países é grande produtor e exportador de petróleo, milho, trigo entre outros. Essa situação causou bastante instabilidade nos preços e, consequentemente, aumentou os preços dos grãos, principalmente pelo temor da falta de produtos num futuro próximo. Após longo período com o valor da saca girando em torno de R$150,00'
 
     },
     
     {
-        content: "Após efetuar o plantio da safra, houve um longo período com falta de chuva, prejudicando grande parte da produção de várias regiões da América do Sul, colocando em dúvida a alta expectativa de oferta de soja. Esse cenário causou uma elevação de preços.Neste dia, o valor ALCANÇOU",
+        content: "Após efetuar o plantio da safra, houve um longo período com falta de chuva. O valor é de ",
         value: 157,
-        reason: ""
+        reason: "Esse clima prejudicou grande parte da produção de várias regiões da América do Sul, colocando em dúvida a alta expectativa de oferta de soja. Isto causou uma elevação nos preços."
     },
     {
-        content: "Após o aumento significativo do preço de fertilizantes, produtores estão se adaptando e migrando para o plantio de soja, já que a cultura é menos exigente em adubação. Sendo assim, estima-se que haverá um aumento significativo de oferta de soja no mercado, pressionando os preços para baixo. Neste dia, o valor ALCANÇOU",
+        content: "Houve um aumento significativo do preço de fertilizantes. O valor é de ",
         value: 186,
-        reason: ""
+        reason: "Os produtores estão se adaptando e migrando para o plantio de soja, já que a cultura é menos exigente em adubação. Sendo assim, estima-se que haverá um aumento significativo de oferta de soja no mercado, pressionando os preços para baixo."
     },
     {
-        content: "Após uma instabilidade política no Brasil, o dólar teve uma alta significativa na semana. Considerando que o dólar faz parte da precificação da soja brasileira, esse fato acabou elevando os preços da soja no Brasil. Neste dia, o valor ALCANÇOU",
+        content: "Considerando que o dólar faz parte da precificação da soja brasileira. O valor é de ",
         value: 150,
-        reason: ""
+        reason: "Após uma instabilidade política no Brasil, o dólar teve uma alta significativa na semana. Esse fato acabou elevando os preços da soja no Brasil."
     },
     {
-        content: "Com a alta de preços dos grãos (soja, milho e sorgo), está ocorrendo um aumento de interesse no plantio dessas culturas. Sendo assim, estima-se que haverá um aumento de aproximadamente 305 de plantio de soja, e consequentemente, uma maior oferta. Esse fator fez com que as cotações de soja caíssem por um período. Neste dia, o valor ALCANÇOU",
+        content: "Houve uma alta de preço da soja. O valor é de ",
         value: 181,
-        reason: ""
+        reason: "Estima-se que haverá um aumento de aproximadamente 30% de plantio de soja, e consequentemente, uma maior oferta. Esse fator fez com que as cotações de soja caíssem por um período. Está ocorrendo um aumento de interesse no plantio dessa cultura."
     },
     {
-        content: "Com a alta de preços dos grãos (soja, milho e sorgo), está ocorrendo um aumento de interesse no plantio dessas culturas. Sendo assim, estima-se que haverá um aumento de aproximadamente 05 de plantio de soja, e consequentemente, uma maior oferta. Esse fator fez com que as cotações de soja caíssem por um período. Neste dia, o valor ALCANÇOU",
+        content: "Aconteceu uma falta de estoque de defensivo para secagem da soja. O valor é de ",
         value: 168,
-        reason: ""
+        reason: "Devido a este acontecimento, a cotação do valor da soja sofreu um aumento em 20%."
     },
 ]
 
