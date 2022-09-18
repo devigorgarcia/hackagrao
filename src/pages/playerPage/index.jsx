@@ -8,12 +8,12 @@ import { SaleContext } from "../../contexts/SaleContext";
 export const PlayerPage = () => {
   const history = useHistory();
   const [grao, setGrao] = useState(false);
-  const { scenario, randomScenario } = useContext(ScenarioContext);
+  const { randomScenario } = useContext(ScenarioContext);
   const { setName } = useContext(SaleContext);
 
   const handlePlay = (route) => {
     randomScenario();
-    history.push(`/${route}`);
+    history.push(`${route}`);
   };
   return (
     <Flex>
@@ -28,7 +28,7 @@ export const PlayerPage = () => {
             Iniciar Jogo
           </Button>
         ) : (
-          <Button onClick={() => handlePlay("gamePage1")}>Iniciar </Button>
+          <Button onClick={() => handlePlay("/gamePage1")}>Iniciar </Button>
         )}
       </Grid>
     </Flex>
