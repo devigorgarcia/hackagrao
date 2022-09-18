@@ -1,8 +1,8 @@
 import { GamePage } from "../../components/GamePage";
 
-export const GamePage1 = () => {
+export const GamePage4 = () => {
  
   return (
-    <GamePage page={2}/>
+    <GamePage page={'/feedback'}/>
   );
 };

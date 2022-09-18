@@ -1,8 +1,13 @@
 const scenarios = [
     {
-        content: "Foi inciado um conflito geopolítico entre dois países da Europa, onde um deles é grande produtor e exportador de petróleo, milho, trigo entre outros. Essa situação causou bastante instabilidade nos preços e, consequentemente, aumentou os preços dos grãos, principalmente pelo temor da falta de produtos num futuro próximo. Após longo período com o valor da saca girando em torno de R$170,00, neste primeiro dia de conflito, o valor ALCANÇOU",
+        content: "Foi inciado um conflito geopolítico entre dois países da Europa, onde um deles é grande produtor e exportador de petróleo, milho, trigo entre outros. Após longo período com o valor da saca girando em torno de R$170,00, neste primeiro dia de conflito, o valor ALCANÇOU",
         value: 140,
+        reason: ' Essa situação causou bastante instabilidade nos preços e, consequentemente, aumentou os preços dos grãos, principalmente pelo temor da falta de produtos num futuro próximo.',
+        product: "clicou, fechou",
+        productDetails: ""
+
     },
+    
     {
         content: "Após efetuar o plantio da safra, houve um longo período com falta de chuva, prejudicando grande parte da produção de várias regiões da América do Sul, colocando em dúvida a alta expectativa de oferta de soja. Esse cenário causou uma elevação de preços.Neste dia, o valor ALCANÇOU",
         value: 150,

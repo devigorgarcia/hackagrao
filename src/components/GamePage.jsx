@@ -39,6 +39,7 @@ export const GamePage = ({ page }) => {
     if (storage === 0) {
       // history.push('/feedback')
     }
+    console.log(page)
     history.push(`/gamePage${page}`);
   };
 
