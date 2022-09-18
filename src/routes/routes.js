@@ -6,6 +6,10 @@ import { GamePage2 } from "../pages/GamePage2";
 import { GamePage3 } from "../pages/GamePage3";
 import { GamePage4 } from "../pages/GamePage4";
 import { InitialPage } from "../pages/InitialPage";
+import { GamePageGD1 } from "../pages/GamePageGD1";
+import { GamePageGD2 } from "../pages/GamePageGD2";
+import { GamePageGD3 } from "../pages/GamePageGD3";
+import { GamePageGD4 } from "../pages/GamePageGD4";
 import { ObjectivePage } from "../pages/ObjectivePage";
 import { PlayerPage } from "../pages/playerPage";
 import { RecommendationPage } from "../pages/RecommendationPage";
@@ -43,6 +47,18 @@ export const Routes = () => {
       </Route>
       <Route path={"/gamePage4"}>
         <GamePage4 />
+      </Route>
+      <Route path={"/gamePageGD1"}>
+        <GamePageGD1 />
+      </Route>
+      <Route path={"/gamePageGD2"}>
+        <GamePageGD2 />
+      </Route>
+      <Route path={"/gamePageGD3"}>
+        <GamePageGD3 />
+      </Route>
+      <Route path={"/gamePageGD4"}>
+        <GamePageGD4 />
       </Route>
     </Switch>
   );
