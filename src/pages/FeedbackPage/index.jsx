@@ -1,4 +1,12 @@
-import { Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { ProductModal } from "../../components/ProductModal";
 import { SaleContext } from "../../contexts/SaleContext";
@@ -7,40 +15,60 @@ import icon1 from "../../assets/icon1.svg";
 import icon2 from "../../assets/icon2.svg";
 import icon3 from "../../assets/icon3.svg";
 import icon4 from "../../assets/icon4.svg";
+import { useHistory } from "react-router-dom";
 export const FeedbackPage = () => {
   const { name, person } = useContext(SaleContext);
+  const history = useHistory();
 
   return (
     <Flex flexDir={"column"}>
-      <Heading fontSize={"22px"} as={"h2"}>
+      <Heading padding={"1rem"} fontSize={"22px"} as={"h2"}>
         {name}!
       </Heading>
-      <Flex>
+      <Flex padding={"6rem 1rem 8rem 1rem"} gap={"1rem"} alignItems="center">
         <Image src={coinIcon} />
         <Text>
-          Seu rendimento foi de <Text as={"b"}>R$ {person.finalValue}</Text>
+          Seu rendimento foi de{" "}
+          <Text as={"b"}>R$ {person.finalValue.toLocaleString("pt-BR")}</Text>
         </Text>
       </Flex>
-      <Flex wrap={'wrap'} w='80%' alignItems={'center'} justifyContent='center'>
-        <ProductModal title={"Venda Fácil"} image={icon1}>
-          Ferramenta digital para que o vendedor de grãos, ao tomar a decisão de
-          negociar, possa se conectar aos compradores da sua rede de contatos de
-          uma só vez.
-        </ProductModal>
-        <ProductModal title={"Negociação 5 Estrelas"} image={icon2}>
-          Negocie sem dor de cabeça com o suporte dos nossos consultores de
-          mercado.
-        </ProductModal>
-        <ProductModal title={"GD VIP Corporate"} image={icon3}>
-          Empodere seus times internos e parceiros do agronegócio. Preços do
-          mercado físico, análises e informações exclusivas todos os dias na
-          palma da mão.
-        </ProductModal>
-        <ProductModal title={"Gestão de Contratos"} image={icon4}>
-          Gerencie por completo todos os documentos das suas negociações e
-          potencialize a gestão com o uso do contrato digital.
-        </ProductModal>
+      <Flex
+        mb={"7rem"}
+        flexDir={"column"}
+        alignItems={"center"}
+        justifyContent="center"
+      >
+        <Flex>
+          <ProductModal title={"Venda Fácil"} image={icon1}>
+            Ferramenta digital para que o vendedor de grãos, ao tomar a decisão
+            de negociar, possa se conectar aos compradores da sua rede de
+            contatos de uma só vez.
+          </ProductModal>
+          <ProductModal title={"Negociação 5 Estrelas"} image={icon2}>
+            Negocie sem dor de cabeça com o suporte dos nossos consultores de
+            mercado.
+          </ProductModal>
+        </Flex>
+        <Flex>
+          <ProductModal title={"GD VIP Corporate"} image={icon3}>
+            Empodere seus times internos e parceiros do agronegócio. Preços do
+            mercado físico, análises e informações exclusivas todos os dias na
+            palma da mão.
+          </ProductModal>
+          <ProductModal title={"Gestão de Contratos"} image={icon4}>
+            Gerencie por completo todos os documentos das suas negociações e
+            potencialize a gestão com o uso do contrato digital.
+          </ProductModal>
+        </Flex>
       </Flex>
+      <Button
+        onClick={() => history.push("/ranking")}
+        bg={"green.300"}
+        width="50%"
+        margin={"auto"}
+      >
+        Ranking
+      </Button>
     </Flex>
   );
 };
