@@ -15,6 +15,7 @@ import { ObjectivePage } from "../pages/ObjectivePage";
 import { PlayerPage } from "../pages/playerPage";
 import { RecommendationPage } from "../pages/RecommendationPage";
 import { TutorialPage } from "../pages/TutorialPage";
+import { RankingPage } from "../pages/RankingPage";
 
 export const Routes = () => {
   return (
@@ -63,6 +64,9 @@ export const Routes = () => {
       </Route>
       <Route path={"/gamePageGD4"}>
         <GamePageGD4 />
+      </Route>
+      <Route path={"/ranking"}>
+        <RankingPage />
       </Route>
     </Switch>
   );

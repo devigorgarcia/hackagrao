@@ -1,35 +1,41 @@
 const scenarios = [
     {
-        content: "Foi inciado um conflito geopolítico entre dois países da Europa.",
+        content: "Foi iniciado um conflito geopolítico entre dois países da Europa, onde um deles é grande produtor e exportador.",
         value: 177,
-        reason: ' Um destes países é grande produtor e exportador de petróleo, milho, trigo entre outros. Essa situação causou bastante instabilidade nos preços e, consequentemente, aumentou os preços dos grãos, principalmente pelo temor da falta de produtos num futuro próximo. Após longo período com o valor da saca girando em torno de R$150,00'
+        reason: ' Com o grande poder de importação e exportação de um dos paises envolvidos no conflito. Essa situação causou bastante instabilidade nos preços e poderá causar um aumento nos preços dos grãos, principalmente pelo temor da falta de produtos num futuro próximo.',
+        tip: "Talvez seja interessante você vender uma certa quantidade nesse cenário."
 
     },
     
     {
         content: "Após efetuar o plantio da safra, houve um longo período com falta de chuva no pais.",
         value: 157,
-        reason: "Esse clima prejudicou grande parte da produção de várias regiões da América do Sul, colocando em dúvida a alta expectativa de oferta de soja. Isto causou uma elevação nos preços."
+        reason: "Esse clima prejudicou grande parte da produção de várias regiões da América do Sul, colocando em dúvida a alta expectativa de oferta de soja. Isto poderá causar uma elevação nos preços.",
+        tip:"Recomenda-se reter uma certa quantidade devido as condições do cenário."
     },
     {
-        content: "Houve um aumento significativo do preço de fertilizantes.",
+        content: "Houve um aumento significativo do preço de fertilizantes, Os produtores estão se adaptando e migrando para o plantio de soja, já que a cultura é menos exigente em adubação.",
         value: 186,
-        reason: "Os produtores estão se adaptando e migrando para o plantio de soja, já que a cultura é menos exigente em adubação. Sendo assim, estima-se que haverá um aumento significativo de oferta de soja no mercado, pressionando os preços para baixo."
+        reason: "Sendo assim, estima-se que haverá um aumento significativo de oferta de soja no mercado, causando uma possível queda nos preços.",
+        tip: "Talvez seja interessante você vender uma certa quantidade nesse cenário."
     },
     {
         content: "Considerando que o dólar faz parte da precificação da soja brasileira.",
         value: 150,
-        reason: "Após uma instabilidade política no Brasil, o dólar teve uma alta significativa na semana. Esse fato acabou elevando os preços da soja no Brasil."
+        reason: "Após uma instabilidade política no Brasil, o dólar teve uma alta significativa na semana. Esse fato acabou elevando os preços da soja no Brasil.",
+        tip:"Recomenda-se reter uma certa quantidade devido as condições do cenário."
     },
     {
-        content: "Houve uma alta de preço da soja.",
+        content: "Devido uma alta nos preços de grãos de soja, está ocorrendo um aumento de interesse do platio dessa cultura.",
         value: 181,
-        reason: "Estima-se que haverá um aumento de aproximadamente 30% de plantio de soja, e consequentemente, uma maior oferta. Esse fator fez com que as cotações de soja caíssem por um período. Está ocorrendo um aumento de interesse no plantio dessa cultura."
+        reason: "Pela alto interrese na cultura deste grão, pode-se esperar uma queda no valor da saca.",
+        tip: "Talvez seja interessante você vender uma certa quantidade nesse cenário."
     },
     {
         content: "Aconteceu uma falta de estoque de defensivo para secagem da soja.",
         value: 168,
-        reason: "Devido a este acontecimento, a cotação do valor da soja sofreu um aumento em 20%."
+        reason: "Devido a este acontecimento, a cotação do valor da soja sofreu um aumento em 20%.",
+        tip:"Recomenda-se reter uma certa quantidade devido as condições do cenário."
     },
 ]
 
