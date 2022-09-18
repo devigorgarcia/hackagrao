@@ -7,9 +7,6 @@ import RecommendationImg from "../../assets/Benefits.svg";
 export const RecommendationPage = () => {
   const history = useHistory();
 
-  const handlePlay = (route) => {
-    history.push(`/${route}`);
-  };
   return (
     <Flex flexDir={"column"} justifyContent="center" alignItems={"center"}>
       <Image src={Recommendation} margin="55px 109px 109px" />

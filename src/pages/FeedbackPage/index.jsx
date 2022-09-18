@@ -1,13 +1,5 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
-import React, { useContext } from "react";
+import { Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import React, { useContext, useState } from "react";
 import { ProductModal } from "../../components/ProductModal";
 import { SaleContext } from "../../contexts/SaleContext";
 import coinIcon from "../../assets/coinIcon.svg";
@@ -19,6 +11,17 @@ import { useHistory } from "react-router-dom";
 export const FeedbackPage = () => {
   const { name, person } = useContext(SaleContext);
   const history = useHistory();
+
+  const handleRanking = (route) => {
+    const newObj = { ...person };
+  
+    let newArray = JSON.parse(localStorage.getItem("@Player"));
+    newArray.push(newObj);
+    console.log(newArray);
+    localStorage.setItem("@Player", JSON.stringify(newArray));
+
+    history.push(route);
+  };
 
   return (
     <Flex flexDir={"column"}>
@@ -62,7 +65,7 @@ export const FeedbackPage = () => {
         </Flex>
       </Flex>
       <Button
-        onClick={() => history.push("/ranking")}
+        onClick={() => handleRanking("/ranking")}
         bg={"green.300"}
         width="50%"
         margin={"auto"}
