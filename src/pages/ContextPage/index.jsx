@@ -2,7 +2,7 @@ import { Button, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Imagem1 from "../../assets/image 1.svg";
-import ContextoImg from "../../assets/Group 7.svg";
+import ContextoImg from "../../assets/Group 4.svg";
 
 export const ContextPage = () => {
   const history = useHistory();

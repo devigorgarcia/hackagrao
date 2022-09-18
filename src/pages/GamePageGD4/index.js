@@ -1,6 +1,6 @@
 import { GamePage } from "../../components/GamePage";
 
-export const GamePageGD1 = () => {
+export const GamePageGD4 = () => {
  
   return (
     <GamePage page={'/feedback'}/>
