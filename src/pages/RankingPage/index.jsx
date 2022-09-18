@@ -42,12 +42,9 @@ export const RankingPage = () => {
             {listRanking.map((ranking, index) => {
               return (
                 <Tr key={index}>
-                  <Td>
-                    <Image src={First} />
-                  </Td>
+                  <Td>{index + 1}</Td>
                   <Td>
                     <strong>{ranking.name}</strong>
-                    <Image src={Rocket} />
                   </Td>
                   <Td>
                     <strong>{ranking.finalValue}</strong>

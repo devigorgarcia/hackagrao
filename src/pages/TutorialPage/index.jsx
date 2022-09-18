@@ -9,15 +9,15 @@ export const TutorialPage = () => {
 
   return (
     <Flex flexDir={"column"} justifyContent="center" alignItems={"center"}>
-      <Image src={ImagemTuto} margin="55px 109px 109px"/>
-      <Image src={TutorialImg} margin="55px 76px 58px"/>
-      <Text margin="55px 25px 25px">
+      <Image src={ImagemTuto} margin="20px 109px 109px"/>
+      <Image src={TutorialImg} margin="25px 76px 58px"/>
+      <Text margin="25px 25px 25px">
         {" "}
         Você estará em um cenário fictício e deverá decidir se quer ou não vender sua safra. <br/>
         Caso opte por vender, clique no botão de venda e preencha a lacuna com a quantidade que deseja e confirme.<br/>
         Escolhendo não vender, você será encaminhado ao próximo cenário.
       </Text>
-      <Button onClick={() => history.push("/playerPage")} bg={"green.300"} margin="198px  76px 77px" padding="25px 70px">Continuar </Button>
+      <Button onClick={() => history.push("/playerPage")} bg={"green.300"} margin="110px  76px 77px" padding="25px 70px">Continuar </Button>
     </Flex>
   );
 };

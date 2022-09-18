@@ -18,8 +18,8 @@ export const InitialPage = () => {
   return (
     <Flex flexDir={"column"} justifyContent="center" alignItems={"center"}>
       <Image src={LogoGrao} margin="37px 58px 58px"/>
-      <Text margin={"95px 43px 43px "}>Para começar aperte o Play</Text>
-      <Image margin="96px 27px 32px " src={Logo} />
+      <Text margin={"70px 43px 43px "}>Para começar aperte o Play</Text>
+      <Image margin="70px 27px 32px " src={Logo} />
       <Button padding="25px 70px" margin="197px 76px 77px 79px" bg={"green.300"} onClick={() => history.push("/objective")}>Play </Button>
     </Flex>
   );

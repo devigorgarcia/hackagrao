@@ -73,7 +73,7 @@ export const PlayerPage = () => {
             bg="green.300"
             onClick={() => handlePlay("/gamePage1")}
           >
-            Iniciar{" "}
+            Iniciar Jogo{" "}
           </Button>
         )}
       </Flex>

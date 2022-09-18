@@ -14,7 +14,7 @@ export const FeedbackPage = () => {
 
   const handleRanking = (route) => {
     const newObj = { ...person };
-  
+
     let newArray = JSON.parse(localStorage.getItem("@Player"));
     newArray.push(newObj);
     console.log(newArray);
@@ -41,6 +41,7 @@ export const FeedbackPage = () => {
         alignItems={"center"}
         justifyContent="center"
       >
+        <Text fontSize={'18px'} marginBottom={10}>Esses são alguns dos nossas soluções</Text>
         <Flex>
           <ProductModal title={"Venda Fácil"} image={icon1}>
             Ferramenta digital para que o vendedor de grãos, ao tomar a decisão

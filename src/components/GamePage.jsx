@@ -139,7 +139,7 @@ export const GamePage = ({ page }) => {
               color={"black"}
               onClick={() => {
                 randomScenario()
-                return history.push(`${page}`)
+                history.push(`${page}`)
               }}
             >
               Não Vender

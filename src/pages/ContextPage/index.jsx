@@ -15,7 +15,7 @@ export const ContextPage = () => {
         Você é um produtor rural que colheu 300.000 sacas de soja e passa por um
         dilema: vender ou reter a saca e esperar o proximo cenário.{" "}
       </Text>
-      <Button onClick={() => history.push("/tutorial")} bg={"green.300"} margin="198px  76px 77px" padding="25px 70px">Continuar </Button>
+      <Button onClick={() => history.push("/tutorial")} bg={"green.300"} margin="110px  76px 77px" padding="25px 70px">Continuar </Button>
     </Flex>
   );
 };
