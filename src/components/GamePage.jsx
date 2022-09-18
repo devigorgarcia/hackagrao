@@ -19,10 +19,12 @@ import StorageIcon from "../assets/storargeIcon.svg";
 import scenarioIcon from "../assets/scenarioIcon.svg";
 import { GoCheck } from "react-icons/go";
 import { IoCloseSharp } from "react-icons/io5";
+import { ProductModal } from "./ProductModal";
 
 export const GamePage = ({ page }) => {
   const { scenario } = useContext(ScenarioContext);
-  const { name, storage, valuesAmount } = useContext(SaleContext);
+  const { name, storage, valuesAmount, grao } = useContext(SaleContext);
+  
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [sale, setSale] = useState(false);
@@ -51,6 +53,7 @@ export const GamePage = ({ page }) => {
         <Heading as="h2" fontSize={"25px"}>
           Olá, {name}
         </Heading>
+        <ProductModal></ProductModal>
         <Flex
           alignItems="center"
           border={"1px solid white"}

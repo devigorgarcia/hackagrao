@@ -20,7 +20,7 @@ export const RecommendationPage = () => {
         Acompanhamento logístico. <br />
         Venda dos grãos em poucos minutos. <br />
       </Text>
-      <Button onClick={() => history.push("/game")} bg={"green.300"} margin="242px  76px 77px" padding="25px 70px">Continuar </Button>
+      <Button onClick={() => history.push("/gamePageGD1")} bg={"green.300"} margin="242px  76px 77px" padding="25px 70px">Continuar </Button>
     </Flex>
   );
 };

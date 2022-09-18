@@ -17,9 +17,8 @@ import logoImg from "../../assets/Logo Hackagrão branca1.svg";
 import PlayerIcon from "../../assets/playerPageIcon.svg";
 export const PlayerPage = () => {
   const history = useHistory();
-  const [grao, setGrao] = useState(false);
   const { randomScenario } = useContext(ScenarioContext);
-  const { setName } = useContext(SaleContext);
+  const { setName, grao, setGrao } = useContext(SaleContext);
 
   const handlePlay = (route) => {
     randomScenario();
