@@ -1,10 +1,14 @@
 import React from 'react'
 import {Switch, Route} from 'react-router-dom'
+import { ContextPage } from '../pages/ContextPage'
 import { GamePage1 } from '../pages/GamePage1'
 import { GamePage2 } from '../pages/GamePage2'
 import { GamePage3 } from '../pages/GamePage3'
 import { GamePage4 } from '../pages/GamePage4'
+import { ObjectivePage } from '../pages/ObjectivePage'
 import { PlayerPage } from '../pages/playerPage'
+import { RecommendationPage } from '../pages/RecommendationPage'
+import { TutorialPage } from '../pages/TutorialPage'
 
 export const Routes = () => {
   return (
@@ -23,6 +27,18 @@ export const Routes = () => {
       </Route>
       <Route path={'/gamePage4'}>
         <GamePage4/>
+      </Route>
+      <Route path={'/objective'}>
+        <ObjectivePage/>
+      </Route>
+      <Route path={'/context'}>
+        <ContextPage/>
+      </Route>
+      <Route path={'/tutorial'}>
+        <TutorialPage/>
+      </Route>
+      <Route path={'/recommendation'}>
+        <RecommendationPage/>
       </Route>
     </Switch>
   )
