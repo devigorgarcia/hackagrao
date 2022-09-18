@@ -17,6 +17,9 @@ export const Routes = () => {
       <Route exact path={"/"}>
         <InitialPage />
       </Route>
+      <Route path={"/objective"}>
+        <ObjectivePage />
+      </Route>
       <Route path={"/context"}>
         <ContextPage />
       </Route>
