@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { ContextPage } from "../pages/ContextPage";
+import { FeedbackPage } from "../pages/FeedbackPage";
 import { GamePage1 } from "../pages/GamePage1";
 import { GamePage2 } from "../pages/GamePage2";
 import { GamePage3 } from "../pages/GamePage3";
@@ -43,6 +44,9 @@ export const Routes = () => {
       </Route>
       <Route path={"/gamePage4"}>
         <GamePage4 />
+      </Route>
+      <Route path={"/feedback"}>
+        <FeedbackPage />
       </Route>
     </Switch>
   );
