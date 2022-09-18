@@ -24,23 +24,19 @@ export const GamePage = ({ page }) => {
 
   const history = useHistory();
 
-  const handleInput = (sacks) => {
-    if (sacks === 0) {
+  const handleInput = (bags) => {
+    if (bags === 0 || bags > storage) {
       setError(true);
       setErrorMsg("Quantidade Invalida");
+    } else {
+      setError(false);
+      valuesAmount(bags, scenario.value);
+      if (storage === 0) {
+        // history.push('/feedback')
+      }
+      console.log("PRIMEIRO");
+      history.push(`/gamePage${page}`);
     }
-    if (sacks > storage) {
-      setError(true);
-      setErrorMsg("Quantidade acima da disponivel ou Valor Indisponivel");
-    }
-
-    setError(false);
-    valuesAmount(sacks, scenario.value);
-    if (storage === 0) {
-      // history.push('/feedback')
-    }
-    console.log(page)
-    history.push(`/gamePage${page}`);
   };
 
   return (

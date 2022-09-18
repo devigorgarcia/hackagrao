@@ -9,10 +9,10 @@ export const PlayerPage = () => {
   const history = useHistory();
   const [grao, setGrao] = useState(false);
   const { scenario, randomScenario } = useContext(ScenarioContext);
-  const {setName} = useContext(SaleContext)
+  const { setName } = useContext(SaleContext);
 
   const handlePlay = (route) => {
-    randomScenario()
+    randomScenario();
     history.push(`/${route}`);
   };
   return (
@@ -20,13 +20,15 @@ export const PlayerPage = () => {
       <Grid>
         <Heading>SimulaGrão</Heading>
         <Text>Qual seu nome:</Text>
-        <Input onChange={(e)=> setName(e.target.value)} />
+        <Input onChange={(e) => setName(e.target.value)} />
         <Text>Quer ajuda da Grão Direto?</Text>
         <Switch id="graoHelp" onChange={() => setGrao(!grao)} />
         {grao ? (
-          <Button onClick={() => handlePlay("gameg")}>Iniciar Jogo</Button>
+          <Button onClick={() => handlePlay("/recommendation")}>
+            Iniciar Jogo
+          </Button>
         ) : (
-          <Button onClick={() => handlePlay("game1")}>Iniciar </Button>
+          <Button onClick={() => handlePlay("gamePage1")}>Iniciar </Button>
         )}
       </Grid>
     </Flex>

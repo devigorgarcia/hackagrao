@@ -6,11 +6,8 @@ export const Providers = ({ children }) => {
   return (
     <>
       <SaleProvider>
-        <ScenarioProvider>
-        {children}
-        </ScenarioProvider>
-      </SaleProvider>;
-
+        <ScenarioProvider>{children}</ScenarioProvider>
+      </SaleProvider>
     </>
   );
 };

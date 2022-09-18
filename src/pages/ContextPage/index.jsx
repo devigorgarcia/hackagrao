@@ -5,16 +5,12 @@ import { useHistory } from "react-router-dom";
 export const ContextPage = () => {
   const history = useHistory();
 
-  const handlePlay = (route) => {
-    history.push(`/${route}`);
-
-  };
   return (
     <Flex>
       <Grid>
         <Heading>Contexto</Heading>
-        <Text>AAAA</Text>
-        <Button onClick={() => handlePlay("tutorial")}>Iniciar </Button>
+        <Text></Text>
+        <Button onClick={() => history.push("/tutorial")}>Continuar </Button>
       </Grid>
     </Flex>
   );

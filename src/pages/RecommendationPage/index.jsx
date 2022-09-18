@@ -14,7 +14,7 @@ export const RecommendationPage = () => {
       <Grid>
         <Heading>Recomendação</Heading>
         <Text>AAAA</Text>
-        <Button onClick={() => handlePlay("game")}>Iniciar </Button>
+        <Button onClick={() => handlePlay("game")}>Continuar </Button>
       </Grid>
     </Flex>
   );

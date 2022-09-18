@@ -5,16 +5,12 @@ import { useHistory } from "react-router-dom";
 export const ObjectivePage = () => {
   const history = useHistory();
 
-  const handlePlay = (route) => {
-    history.push(`/${route}`);
-
-  };
   return (
     <Flex>
       <Grid>
         <Heading>Objetivo do Jogo</Heading>
         <Text>AAAA</Text>
-        <Button onClick={() => handlePlay("context")}>Iniciar </Button>
+        <Button onClick={() => history.push("/context")}>Continuar </Button>
       </Grid>
     </Flex>
   );
