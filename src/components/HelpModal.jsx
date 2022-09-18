@@ -11,8 +11,9 @@ import {
 } from "@chakra-ui/react";
 import { FiHelpCircle } from "react-icons/fi";
 
-export const HelpModal = ({ title, children }) => {
+export const HelpModal = ({ title, tips, children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  console.log(tips)
   return (
     <Flex alignItems={"center"} justifyContent="center">
       <FiHelpCircle
@@ -36,6 +37,8 @@ export const HelpModal = ({ title, children }) => {
           <ModalCloseButton color={"black"} />
           <ModalBody>
             <Text color={"black"}>{children}</Text>
+
+            <Text color={'red'} paddingTop='0.5rem' as='b'>Dica: {tips}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

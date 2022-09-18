@@ -23,7 +23,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { HelpModal } from "./HelpModal";
 
 export const GamePage = ({ page }) => {
-  const { scenario } = useContext(ScenarioContext);
+  const { scenario, randomScenario } = useContext(ScenarioContext);
   const { name, storage, valuesAmount, grao } = useContext(SaleContext);
 
   const [error, setError] = useState(false);
@@ -33,6 +33,7 @@ export const GamePage = ({ page }) => {
 
   const history = useHistory();
 
+  console.log(scenario)
   const handleInput = (bags) => {
     if (bags === 0 || bags > storage) {
       setError(true);
@@ -40,12 +41,15 @@ export const GamePage = ({ page }) => {
     } else {
       setError(false);
       valuesAmount(bags, scenario.value);
+      randomScenario()
       if (storage === 0) {
         history.push("/feedback");
       }
       history.push(`${page}`);
     }
   };
+
+
 
   return (
     <Flex flexDir={"column"} padding="1.7rem ">
@@ -80,7 +84,7 @@ export const GamePage = ({ page }) => {
             <Text align={"center"} fontSize={"15px"}>
               Você quer uma ajuda?
             </Text>
-            <HelpModal title={"Dica"}>{scenario.reason}</HelpModal>
+            <HelpModal title={"Dica"} tips={scenario.tip}>{scenario.reason}</HelpModal>
           </Flex>
         )}
       </Flex>
@@ -133,7 +137,10 @@ export const GamePage = ({ page }) => {
               bg="#C63F3F"
               borderRadius={"20px"}
               color={"black"}
-              onClick={() => history.push(`${page}`)}
+              onClick={() => {
+                randomScenario()
+                return history.push(`${page}`)
+              }}
             >
               Não Vender
             </Button>
