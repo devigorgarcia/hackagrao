@@ -58,7 +58,7 @@ export const GamePage = ({ page }) => {
         <Box>
           <ButtonGroup>
             <Button onClick={() => setSale(true)}>Vender</Button>
-            <Button>Não Vender</Button>
+            <Button onClick={()=> history.push(`/gamePage${page}`)}>Não Vender</Button>
           </ButtonGroup>
         </Box>
         {sale && (
