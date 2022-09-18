@@ -77,8 +77,10 @@ export const GamePage = ({ page }) => {
             justifyContent={"center"}
             width="100%"
           >
-            <Text align={'center'} fontSize={'15px'}>Você quer uma ajuda?</Text>
-            <HelpModal title={"Dica"}></HelpModal>
+            <Text align={"center"} fontSize={"15px"}>
+              Você quer uma ajuda?
+            </Text>
+            <HelpModal title={"Dica"}>{scenario.reason}</HelpModal>
           </Flex>
         )}
       </Flex>

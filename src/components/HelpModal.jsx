@@ -16,10 +16,9 @@ export const HelpModal = ({ title, children }) => {
   return (
     <Flex alignItems={"center"} justifyContent="center">
       <FiHelpCircle
-        color={"white"}
+        color={"#8CC63F"}
         size="30px"
         cursor={"pointer"}
-        // color="green"
         onClick={onOpen}
       />
 
