@@ -5,6 +5,7 @@ import { GamePage1 } from "../pages/GamePage1";
 import { GamePage2 } from "../pages/GamePage2";
 import { GamePage3 } from "../pages/GamePage3";
 import { GamePage4 } from "../pages/GamePage4";
+import { InitialPage } from "../pages/InitialPage";
 import { ObjectivePage } from "../pages/ObjectivePage";
 import { PlayerPage } from "../pages/playerPage";
 import { RecommendationPage } from "../pages/RecommendationPage";
@@ -14,7 +15,7 @@ export const Routes = () => {
   return (
     <Switch>
       <Route exact path={"/"}>
-        <ObjectivePage />
+        <InitialPage />
       </Route>
       <Route path={"/context"}>
         <ContextPage />
