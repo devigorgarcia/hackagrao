@@ -3,6 +3,6 @@ import { GamePage } from "../../components/GamePage";
 export const GamePage1 = () => {
  
   return (
-    <GamePage page={2}/>
+    <GamePage page={"/gamePage2"}/>
   );
 };

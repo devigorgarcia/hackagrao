@@ -1,0 +1,45 @@
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Text,
+  Flex,
+} from "@chakra-ui/react";
+import { FiHelpCircle } from "react-icons/fi";
+
+export const HelpModal = ({ title, children }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <Flex alignItems={"center"} justifyContent="center">
+      <FiHelpCircle
+        color={"white"}
+        size="30px"
+        cursor={"pointer"}
+        // color="green"
+        onClick={onOpen}
+      />
+
+      <Modal
+        size={["xs", "sm", "md", "lg"]}
+        isCentered={true}
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader textAlign={"center"} color={"green.400"}>
+            {title}
+          </ModalHeader>
+          <ModalCloseButton color={"black"} />
+          <ModalBody>
+            <Text color={"black"}>{children}</Text>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </Flex>
+  );
+};

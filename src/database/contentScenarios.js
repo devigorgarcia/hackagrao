@@ -7,7 +7,7 @@ const scenarios = [
     },
     
     {
-        content: "Após efetuar o plantio da safra, houve um longo período com falta de chuva.",
+        content: "Após efetuar o plantio da safra, houve um longo período com falta de chuva no pais.",
         value: 157,
         reason: "Esse clima prejudicou grande parte da produção de várias regiões da América do Sul, colocando em dúvida a alta expectativa de oferta de soja. Isto causou uma elevação nos preços."
     },

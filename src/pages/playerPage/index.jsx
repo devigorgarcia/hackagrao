@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { Switch } from "@chakra-ui/react";
 import { ScenarioContext } from "../../contexts/ScenarioContext";

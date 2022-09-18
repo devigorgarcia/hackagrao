@@ -19,12 +19,13 @@ import StorageIcon from "../assets/storargeIcon.svg";
 import scenarioIcon from "../assets/scenarioIcon.svg";
 import { GoCheck } from "react-icons/go";
 import { IoCloseSharp } from "react-icons/io5";
-import { ProductModal } from "./ProductModal";
+// import question-mark from "../assets/question-mark.svg";
+import { HelpModal } from "./HelpModal";
 
 export const GamePage = ({ page }) => {
   const { scenario } = useContext(ScenarioContext);
   const { name, storage, valuesAmount, grao } = useContext(SaleContext);
-  
+
   const [error, setError] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const [sale, setSale] = useState(false);
@@ -40,34 +41,48 @@ export const GamePage = ({ page }) => {
       setError(false);
       valuesAmount(bags, scenario.value);
       if (storage === 0) {
-        // history.push('/feedback')
+        history.push("/feedback");
       }
-      console.log("PRIMEIRO");
-      history.push(`/gamePage${page}`);
+      history.push(`${page}`);
     }
   };
 
   return (
     <Flex flexDir={"column"} padding="1.7rem ">
-      <Stack spacing={4}>
-        <Heading as="h2" fontSize={"25px"}>
-          Olá, {name}
-        </Heading>
-        <ProductModal></ProductModal>
-        <Flex
-          alignItems="center"
-          border={"1px solid white"}
-          borderRadius="10px"
-          padding={"0.5rem"}
-          justifyContent="center"
-          width={"60%"}
-        >
-          <Image w={"24px"} src={StorageIcon} />
-          <Text as="b" ml={"1rem"} size={"20px"}>
-            {storage.toLocaleString("pt-BR")} sacas
-          </Text>
+      <Flex gap={"1rem"}>
+        <Flex flexDir={"column"} width="100%" gap="1rem">
+          <Heading as="h2" fontSize={"25px"}>
+            Olá, {name}
+          </Heading>
+
+          <Flex
+            alignItems="center"
+            border={"1px solid white"}
+            borderRadius="10px"
+            padding={"0.5rem"}
+            justifyContent="center"
+            width={"90%"}
+          >
+            <Image w={"24px"} src={StorageIcon} />
+            <Text as="b" ml={"1rem"} size={"20px"}>
+              {storage.toLocaleString("pt-BR")} sacas
+            </Text>
+          </Flex>
         </Flex>
-      </Stack>
+        {grao && (
+          <Flex
+            flexDir={"column"}
+            gap={"1rem"}
+            alignItem="center"
+            justifyContent={"center"}
+            width="100%"
+          >
+            <Text align={'center'} fontSize={'15px'}>Você quer uma ajuda?</Text>
+            <HelpModal title={"Dica"}></HelpModal>
+          </Flex>
+        )}
+      </Flex>
+
       <Flex
         flexDir={"column"}
         paddingTop={"5.5rem"}
@@ -75,7 +90,7 @@ export const GamePage = ({ page }) => {
         alignItems={"center"}
         gap="2rem"
       >
-        <Image width={"60px"} src={scenarioIcon} />
+        <Image src={scenarioIcon} />
         <Text lineHeight={"170%"} mt={"1rem"}>
           {scenario?.content}
         </Text>
@@ -116,7 +131,7 @@ export const GamePage = ({ page }) => {
               bg="#C63F3F"
               borderRadius={"20px"}
               color={"black"}
-              onClick={() => history.push(`/gamePage${page}`)}
+              onClick={() => history.push(`${page}`)}
             >
               Não Vender
             </Button>
