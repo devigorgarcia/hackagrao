@@ -1,8 +1,8 @@
-import { Button, Flex, Grid, Heading } from "@chakra-ui/react";
+import { Button, Flex, Grid, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-export const InitialPage = () => {
+export const ContextPage = () => {
   const history = useHistory();
 
   const handlePlay = (route) => {
@@ -12,8 +12,9 @@ export const InitialPage = () => {
   return (
     <Flex>
       <Grid>
-        <Heading>SimulaGrão</Heading>
-        <Button onClick={() => handlePlay("objective")}>Iniciar</Button>
+        <Heading>Contexto</Heading>
+        <Text>AAAA</Text>
+        <Button onClick={() => handlePlay("tutorial")}>Iniciar </Button>
       </Grid>
     </Flex>
   );
